@@ -1,4 +1,4 @@
-package com.example.assignment;
+package com.example.assignment.Config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ public class SwaggerConfig{
     public Docket swagger() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.basePackage("com.example.assignment.Controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
