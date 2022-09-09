@@ -16,6 +16,7 @@ public class AuthorServicelmpl implements AuthorService{
     private final AuthorRepository authorRepository;
 
     @Override
+    @Transactional
     public Long join(AuthorRequestDto requestDto){
         return authorRepository.save(Author.builder()
                 .birthday(requestDto.getBirthday())
