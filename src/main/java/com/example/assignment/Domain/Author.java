@@ -23,7 +23,7 @@ public class Author {
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
-    private Long birthday;
+    private int birthday;
     @ManyToOne
     @JsonManagedReference
 //    순환참조 방지

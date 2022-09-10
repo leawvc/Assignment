@@ -9,5 +9,5 @@ import lombok.*;
 public class AuthorResponseDto {
     private Long id;
     private String name;
-    private Long birthday;
+    private int birthday;
 }

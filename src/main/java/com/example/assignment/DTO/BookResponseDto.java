@@ -16,7 +16,7 @@ public class BookResponseDto {
     private int age;
     private double price;
     private int currency;
-    private String author;
+    private String authors;
 
     public BookResponseDto(Book book){
         this.bookId = book.getId();
@@ -27,6 +27,6 @@ public class BookResponseDto {
         this.age = book.getAge();
         this.price = book.getPrice();
         this.currency = book.getCurrency();
-        this.author = book.getAuthor();
+        this.authors = book.getAuthor();
     }
 }

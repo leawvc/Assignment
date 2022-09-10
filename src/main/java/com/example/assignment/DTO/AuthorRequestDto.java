@@ -5,5 +5,5 @@ import lombok.Getter;
 @Getter
 public class AuthorRequestDto {
     private String name;
-    private Long birthday;
+    private int birthday;
 }

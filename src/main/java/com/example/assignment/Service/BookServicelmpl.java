@@ -21,7 +21,7 @@ import java.util.Locale;
 @RequiredArgsConstructor
 public class BookServicelmpl implements BookService{
     private final BookRepository bookRepository;
-    private final Currency currency;
+//    private final Currency currency;
     @Transactional(readOnly = true)
     public Page<BookResponseDto> getList(int page){
         Pageable pageable = PageRequest.of(page,10);
@@ -31,11 +31,11 @@ public class BookServicelmpl implements BookService{
     @Override
     @Transactional
     public Long createBook(BookRequestDto requestDto) {
-        String bookAuthor = Arrays.toString(requestDto.getAuthor().split(",| "));
-        if (!BookService.checkISBNNumber(requestDto.getIsbn())) throw new RuntimeException("ISBN 패턴에 맞는 값을 입력하시오");
-        Locale usa = new Locale("en","us");
-        Currency dollars = currency.getInstance(usa);
-        NumberFormat dollarFormat = NumberFormat.getCurrencyInstance(usa);
+        String bookAuthor = Arrays.toString(requestDto.getAuthors().split(",| "));
+//        if (!BookService.checkISBNNumber(requestDto.getIsbn())) throw new RuntimeException("ISBN 패턴에 맞는 값을 입력하시오");
+//        Locale usa = new Locale("en","us");
+//        Currency dollars = currency.getInstance(usa);
+//        NumberFormat dollarFormat = NumberFormat.getCurrencyInstance(usa);
         return  bookRepository.save(Book.builder()
                 .bookName(requestDto.getBookname())
                 .extinction(requestDto.getExtinction())
@@ -43,7 +43,8 @@ public class BookServicelmpl implements BookService{
                 .bookpage(requestDto.getBookpage())
                 .age(requestDto.getAge())
                 .price(requestDto.getPrice())
-                .currency(Integer.parseInt(dollarFormat.format(requestDto.getCurrency())))
+//                .currency(Integer.parseInt(dollarFormat.format(requestDto.getCurrency())))
+                .currency(requestDto.getCurrency())
                 .author(bookAuthor)
                 .build()).getId();
     }

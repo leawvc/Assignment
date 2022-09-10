@@ -11,5 +11,5 @@ public class BookRequestDto {
     private int age;
     private double price;
     private int currency;
-    private String author;
+    private String authors;
 }
