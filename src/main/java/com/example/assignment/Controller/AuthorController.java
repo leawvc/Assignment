@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthorController {
     private final AuthorService authorService;
 
-    @PostMapping("/Author")
+    @PostMapping("/author")
     public Long join(@RequestBody AuthorRequestDto authorRequestDto){
         return authorService.join(authorRequestDto);
     }

@@ -3,8 +3,6 @@ package com.example.assignment.DTO;
 import com.example.assignment.Domain.Book;
 import lombok.*;
 
-import java.util.List;
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -13,11 +11,11 @@ public class BookResponseDto {
     private Long bookId;
     private String bookname;
     private Boolean extinction;
-    private String isbn;
-    private Long bookpage;
-    private Long age;
-    private Long price;
-    private Long currency;
+    private int isbn;
+    private int bookpage;
+    private int age;
+    private double price;
+    private int currency;
     private String author;
 
     public BookResponseDto(Book book){

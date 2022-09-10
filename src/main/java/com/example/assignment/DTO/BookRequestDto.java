@@ -6,10 +6,10 @@ import lombok.Getter;
 public class BookRequestDto {
     private String bookname;
     private Boolean extinction;
-    private String isbn;
-    private Long bookpage;
-    private Long age;
-    private Long price;
-    private Long currency;
+    private int isbn;
+    private int bookpage;
+    private int age;
+    private double price;
+    private int currency;
     private String author;
 }

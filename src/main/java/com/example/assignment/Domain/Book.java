@@ -26,15 +26,15 @@ public class Book {
     @Column(nullable = false)
     private Boolean extinction;
     @Column(nullable = false)
-    private String isbn;
+    private int isbn;
     @Column(nullable = false)
-    private Long bookpage;
+    private int bookpage;
     @Column(nullable = false)
-    private Long age;
+    private int age;
     @Column
-    private Long price;
+    private double price;
     @Column
-    private Long currency;
+    private int currency;
     @Column
     private String author;
 //    순환 참조 방지

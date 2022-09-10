@@ -1,5 +1,6 @@
 package com.example.assignment.Domain;
 
+import com.example.assignment.DTO.AuthorRequestDto;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +26,7 @@ public class Author {
     private Long birthday;
     @ManyToOne
     @JsonManagedReference
-//    순환참고 방지
+//    순환참조 방지
     @JoinColumn(name = "BOOK_ID")
     private Book book;
 }
