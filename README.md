@@ -29,3 +29,6 @@ http://localhost:8080/swagger-ui/index.html#/
    * DTO
    * Repository
    * Service
+
+### 코드 작성 이유
+1.
