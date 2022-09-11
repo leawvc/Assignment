@@ -20,3 +20,12 @@ http://localhost:8080/swagger-ui/index.html#/
 * 페이징 처리 : https://numchar.tistory.com/28
 * 에러 처리 : https://numchar.tistory.com/27
 * Swagger : https://numchar.tistory.com/26
+
+### 폴더 구조
+* assignment
+   * Config
+   * Controller
+   * Domain
+   * DTO
+   * Repository
+   * Service
