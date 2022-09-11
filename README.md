@@ -1,7 +1,7 @@
 # Assignment
-
 commit massege : (기능 이름) 구현
-
+### Swagger url
+http://localhost:8080/swagger-ui/index.html#/
 <br></br>
 ### ERD
 ![image](https://user-images.githubusercontent.com/43610417/189479484-0e605974-00d4-4cb5-ab57-8987d4931d5b.png)
