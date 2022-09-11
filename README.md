@@ -14,4 +14,9 @@ commit massege : (기능 이름) 구현
 * Java11
 ### Security 
 * Spring Security
-
+### 에러 처리
+* Currency : https://numchar.tistory.com/31
+* 저자 여러명 : https://numchar.tistory.com/29
+* 페이징 처리 : https://numchar.tistory.com/28
+* 에러 처리 : https://numchar.tistory.com/27
+* Swagger : https://numchar.tistory.com/26
