@@ -34,11 +34,11 @@ public class Book {
     @Column
     private double price;
     @Column
-    private int currency;
+    private String currency;
     @Column
-    private String author;
+    private String authors;
 //    순환 참조 방지
     @JsonBackReference
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
-    private List<Author> authors = new ArrayList<>();
+    private List<Author> authorList = new ArrayList<>();
 }

@@ -1,7 +1,10 @@
 package com.example.assignment.DTO;
 
+import com.example.assignment.Domain.Author;
 import com.example.assignment.Domain.Book;
 import lombok.*;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -15,9 +18,9 @@ public class BookResponseDto {
     private int bookpage;
     private int age;
     private double price;
-    private int currency;
+    private String currency;
+//    private List<Author> authorList;
     private String authors;
-
     public BookResponseDto(Book book){
         this.bookId = book.getId();
         this.bookname = book.getBookName();
@@ -27,6 +30,7 @@ public class BookResponseDto {
         this.age = book.getAge();
         this.price = book.getPrice();
         this.currency = book.getCurrency();
-        this.authors = book.getAuthor();
+        this.authors = book.getAuthors();
+//        this.authorList = book.getAuthorList();
     }
 }

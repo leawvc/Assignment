@@ -10,6 +10,7 @@ public class BookRequestDto {
     private int bookpage;
     private int age;
     private double price;
-    private int currency;
+    private double currency;
     private String authors;
+//    private List<Author> authorList;
 }

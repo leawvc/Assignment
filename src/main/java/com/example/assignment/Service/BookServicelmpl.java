@@ -5,7 +5,9 @@ import com.example.assignment.DTO.BookResponseDto;
 import com.example.assignment.Domain.Book;
 import com.example.assignment.Repository.BookRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cglib.core.Local;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -32,10 +34,10 @@ public class BookServicelmpl implements BookService{
     @Transactional
     public Long createBook(BookRequestDto requestDto) {
         String bookAuthor = Arrays.toString(requestDto.getAuthors().split(",| "));
-//        if (!BookService.checkISBNNumber(requestDto.getIsbn())) throw new RuntimeException("ISBN 패턴에 맞는 값을 입력하시오");
-//        Locale usa = new Locale("en","us");
-//        Currency dollars = currency.getInstance(usa);
-//        NumberFormat dollarFormat = NumberFormat.getCurrencyInstance(usa);
+        if (!BookService.checkISBNNumber(requestDto.getIsbn())) throw new RuntimeException("ISBN 패턴에 맞는 값을 입력하시오");
+        Locale usa = new Locale("en","us");
+//        Currency dollars = Currency.getInstance(usa);
+        NumberFormat dollarFormat = NumberFormat.getCurrencyInstance(usa);
         return  bookRepository.save(Book.builder()
                 .bookName(requestDto.getBookname())
                 .extinction(requestDto.getExtinction())
@@ -43,9 +45,10 @@ public class BookServicelmpl implements BookService{
                 .bookpage(requestDto.getBookpage())
                 .age(requestDto.getAge())
                 .price(requestDto.getPrice())
-//                .currency(Integer.parseInt(dollarFormat.format(requestDto.getCurrency())))
-                .currency(requestDto.getCurrency())
-                .author(bookAuthor)
+                .currency(dollarFormat.format(requestDto.getCurrency()))
+                .authors(requestDto.getAuthors())
+//                .currency(requestDto.getCurrency())
+//                .authorList(requestDto.getAuthorList())
                 .build()).getId();
     }
 }
