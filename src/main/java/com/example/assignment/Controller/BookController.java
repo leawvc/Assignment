@@ -20,7 +20,7 @@ public class BookController {
     }
 
     @PostMapping("/book")
-    public Long createBook(@RequestBody BookRequestDto requestDto){
-        return bookService.createBook(requestDto);
+    public Long createBook(@RequestBody BookRequestDto requestDto, @RequestParam String local){
+        return bookService.createBook(requestDto,local);
     }
 }

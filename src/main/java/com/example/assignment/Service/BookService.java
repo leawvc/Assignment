@@ -4,8 +4,13 @@ import com.example.assignment.DTO.BookRequestDto;
 import com.example.assignment.DTO.BookResponseDto;
 import org.springframework.data.domain.Page;
 
+import java.util.Currency;
+
 public interface BookService {
-    public Long createBook(BookRequestDto requestDto);
+    Currency KRW = Currency.getInstance("KRW");
+    Currency USD = Currency.getInstance("USD");
+    Currency EUR = Currency.getInstance("EUR");
+    public Long createBook(BookRequestDto requestDto, String local);
     Page<BookResponseDto> getList(int page);
     static boolean checkISBNNumber(long number)
     {
