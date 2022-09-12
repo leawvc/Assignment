@@ -1,6 +1,9 @@
 package com.example.assignment.DTO;
 
+import com.example.assignment.Domain.Author;
 import lombok.Getter;
+
+import java.util.List;
 
 @Getter
 public class BookRequestDto {
@@ -9,8 +12,8 @@ public class BookRequestDto {
     private int isbn;
     private int bookpage;
     private int age;
-    private double price;
-    private double currency;
+    private String price;
+    private float currency;
     private String authors;
 //    private List<Author> authorList;
 }

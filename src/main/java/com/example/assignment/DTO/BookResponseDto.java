@@ -17,9 +17,9 @@ public class BookResponseDto {
     private int isbn;
     private int bookpage;
     private int age;
-    private double price;
+    private String price;
     private String currency;
-//    private List<Author> authorList;
+    private List<Author> authorList;
     private String authors;
     public BookResponseDto(Book book){
         this.bookId = book.getId();

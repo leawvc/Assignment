@@ -1,6 +1,7 @@
 package com.example.assignment.Domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -32,7 +33,7 @@ public class Book {
     @Column(nullable = false)
     private int age;
     @Column
-    private double price;
+    private String price;
     @Column
     private String currency;
     @Column
@@ -40,5 +41,6 @@ public class Book {
 //    순환 참조 방지
     @JsonBackReference
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Author> authorList = new ArrayList<>();
 }
