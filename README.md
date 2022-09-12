@@ -7,13 +7,29 @@ http://localhost:8080/swagger-ui/index.html#/
 ![image](https://user-images.githubusercontent.com/43610417/189479484-0e605974-00d4-4cb5-ab57-8987d4931d5b.png)
 <br></br>
 ## 💻 개발 언어 및 활용 기술
-
 ### 개발 환경 
 * SpringBoot2.7.1
 * 빌드 도구 : Gradle
 * Java11
-### Security 
-* Spring Security
+* intellij
+
+### Compile
+* window
+```
+sudo apt-get remove openjdk*
+sudo apt-get autoremove --purge
+sudo add-apt-repository ppa:openjdk-r/ppa
+sudo apt install openjdk-11-jdk
+java -version
+javac AssignmentApplication.java
+java -cp AssignmentApplication
+```
+* Mac
+```
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+javac AssignmentApplication.java
+java -cp AssignmentApplication
+```
 ### 에러 처리
 * Currency : https://numchar.tistory.com/31
 * 저자 여러명 : https://numchar.tistory.com/29
