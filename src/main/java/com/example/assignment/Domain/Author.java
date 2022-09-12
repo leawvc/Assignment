@@ -1,6 +1,5 @@
 package com.example.assignment.Domain;
 
-import com.example.assignment.DTO.AuthorRequestDto;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +18,7 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "AUTHOR_ID")
-    Long id;
+    private Long id;
     @Column(nullable = false)
     private String name;
     @Column(nullable = false)
