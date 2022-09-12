@@ -17,7 +17,6 @@ http://localhost:8080/swagger-ui/index.html#/
 ### 에러 처리
 * Currency : https://numchar.tistory.com/31
 * 저자 여러명 : https://numchar.tistory.com/29
-* 페이징 처리 : https://numchar.tistory.com/28
 * 에러 처리 : https://numchar.tistory.com/27
 * Swagger : https://numchar.tistory.com/26
 
