@@ -31,6 +31,5 @@ public class BookResponseDto {
         this.price = book.getPrice();
         this.currency = book.getCurrency();
         this.authors = book.getAuthors();
-//        this.authorList = book.getAuthorList();
     }
 }

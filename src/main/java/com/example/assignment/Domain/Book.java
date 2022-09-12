@@ -43,4 +43,10 @@ public class Book {
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<Author> authorList = new ArrayList<>();
+    public void addAuthor(Author author){
+        this.authorList.add(author);
+        if (author.getBook() != this){
+            author.setBook(this);
+        }
+    }
 }

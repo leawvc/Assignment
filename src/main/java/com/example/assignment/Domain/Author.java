@@ -29,4 +29,12 @@ public class Author {
 //    순환참조 방지
     @JoinColumn(name = "BOOK_ID")
     private Book book;
+
+    public void setBook(Book book){
+        if (this.book != null){
+            this.book.getAuthorList().remove(this);
+        }
+        this.book = book;
+        book.addAuthor(this);
+    }
 }
