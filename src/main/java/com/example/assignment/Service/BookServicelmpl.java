@@ -30,8 +30,9 @@ public class BookServicelmpl implements BookService{
     @Transactional
     public Long createBook(BookRequestDto requestDto,String local) {
         Currency money = null;
-//        String bookAuthor = Arrays.toString(requestDto.getAuthors().split(",| "));
         String bookAuthor = Arrays.toString(requestDto.getAuthors().split(",| "));
+        if (requestDto.getBookname() == null) throw new NullPointerException("책 이름을 입력해주세요");
+        if (requestDto.getExtinction() == null) throw new NullPointerException("단종 여부를 입력해주세요");
         if (local.equals("KRW")){
             money = KRW;
         } else if (local.equals("USD")) {
@@ -42,6 +43,9 @@ public class BookServicelmpl implements BookService{
         if (!BookService.checkISBNNumber(requestDto.getIsbn())) throw new RuntimeException("ISBN 패턴에 맞는 값을 입력하시오");
         String[] bookPrice= requestDto.getPrice().split("\\.");
         String bookMoney = null;
+        if (requestDto.getPrice() == null){
+            bookMoney = null;
+        }
         if (requestDto.getPrice().contains(".")){
             if (bookPrice[1].length() > 2) throw new RuntimeException("소수점 2자리 수까지의 값을 입력해주세요");
             else {bookMoney = MessageFormat.format("{0}{1}{2}",bookPrice[0],".",bookPrice[1]);}
