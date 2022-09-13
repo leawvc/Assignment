@@ -64,3 +64,12 @@ java -cp AssignmentApplication
 9. @JsonBackReference : 순환 참조를 방지하기 위해서 자식 클래스에 사용
 10. paging처리 : paging의 기본 값으로 10개를 고정하였고 몇 번째 페이지인지 0번째 부터 값을 RequestParam으로 가져 올 수 있게 하였다.
 11. 소수점 조건 처리 : 값을 입력 받아서 소수점으로부터 길이를 측정하려고 하니 float으로 입력 받은 값을 소수점을 기준으로 나눌수 없었다. 그렇기에 입력받는 값을 String형으로 입력을 받아서 contains으로 포함이 되어 있는지 확인을 한 후에 배열에 담은 값을 두 번째 칸을 길이를 측정한 후 2보다 많은 경우 RuntimeError를 넣었다.
+
+### 일정
+* 09-07 : Swagger 목업 작업, ERD설계
+* 09-08 : Swagger 에러 처리
+* 09-09 : Paging 처리
+* 09-10 : isbn 처리, Currency 의존성 문제 발견
+* 09-11 : Currency 문제 해결 및 조건 처리, 에러 정리
+* 09-12 : 연관 관계 편의 메서드 설정, Price isbn조건 처리 완료, Readme 정리
+* 09-13 : 에러 정리, Readme 정리
