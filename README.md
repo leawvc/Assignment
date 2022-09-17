@@ -73,4 +73,3 @@ java -cp AssignmentApplication
 * 09-11 : Currency 문제 해결 및 조건 처리, 에러 정리
 * 09-12 : 연관 관계 편의 메서드 설정, Price isbn조건 처리 완료, Readme 정리
 * 09-13 : 에러 정리, Readme 정리
-* 09-17 : N + 1 문제 해결
