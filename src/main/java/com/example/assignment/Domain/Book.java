@@ -30,7 +30,7 @@ public class Book {
     @Column(nullable = false)
     private int age;
     @Column
-    private String price;
+    private double price;
     @Column
     private String currency;
     @Column

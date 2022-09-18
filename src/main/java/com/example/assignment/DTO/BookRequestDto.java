@@ -12,7 +12,7 @@ public class BookRequestDto {
     private int isbn;
     private int bookpage;
     private int age;
-    private String price;
+    private double price;
     private float currency;
     private String authors;
 //    private List<Author> authorList;

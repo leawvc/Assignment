@@ -17,7 +17,7 @@ public class BookResponseDto {
     private int isbn;
     private int bookpage;
     private int age;
-    private String price;
+    private double price;
     private String currency;
     private List<Author> authorList;
     private String authors;
