@@ -22,7 +22,6 @@ public class AuthorServicelmpl implements AuthorService{
         if (requestDto.getName() == null) throw new NullPointerException("이름을 입력해주세요");
         else if (requestDto.getName().length() > 100) throw new RuntimeException("100자안의 이름을 입력해주세요");
         int day = (int)(Math.log10(requestDto.getBirthday()) + 1);
-        System.out.println(day);
         if (requestDto.getBirthday() == 0) throw new NullPointerException("생년 월일을 입력해주세요");
         else if (day != 8) throw new RuntimeException("생년월일을 ******** 8자리 양식에 맞게 입력해주세요");
         else{
