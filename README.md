@@ -4,7 +4,7 @@ commit massege : (기능 이름) 구현
 http://localhost:8080/swagger-ui/index.html#/
 <br></br>
 ### ERD
-![image](https://user-images.githubusercontent.com/43610417/189779748-96ae59e3-8779-48a3-a790-19533e82e4e6.png)
+![image](https://user-images.githubusercontent.com/43610417/190899314-8be33b24-d399-4315-af83-3e291fbb1e84.png)
 <br></br>
 ## 💻 개발 언어 및 활용 기술
 ### 개발 환경 
