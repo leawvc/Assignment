@@ -30,7 +30,7 @@ public class BookServicelmpl implements BookService{
     @Transactional
     public Long createBook(BookRequestDto requestDto,String local) {
         Currency money = null;
-        String bookAuthor = Arrays.toString(requestDto.getAuthors().split(",| "));
+        String bookAuthor = requestDto.getAuthors().replaceAll("\\s", "");
         if (requestDto.getBookname() == null) throw new NullPointerException("책 이름을 입력해주세요");
         if (requestDto.getExtinction() == null) throw new NullPointerException("단종 여부를 입력해주세요");
         if (local.equals("KRW")){
@@ -52,7 +52,7 @@ public class BookServicelmpl implements BookService{
                 .bookpage(requestDto.getBookpage())
                 .age(requestDto.getAge())
                 .price(bigDecimal.doubleValue())
-                .authors(requestDto.getAuthors())
+                .authors(bookAuthor)
                 .currency(MessageFormat.format("{0}{1}", requestDto.getCurrency(), money.getSymbol()))
                 .build()).getId();
     }
