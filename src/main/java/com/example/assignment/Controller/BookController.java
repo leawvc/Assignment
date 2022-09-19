@@ -6,6 +6,9 @@ import com.example.assignment.Service.BookService;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,10 +18,8 @@ public class BookController {
 
     @ApiOperation("페이징")
     @GetMapping("/book/paging")
-    public Page<BookResponseDto> getList(
-            @RequestParam("page") int page
-    ){
-        return bookService.getList(page);
+    public Page<BookResponseDto> getList(@PageableDefault(sort="id", direction = Sort.Direction.DESC) Pageable pageable){
+        return bookService.getList(pageable);
     }
     @ApiOperation("책 생성")
     @PostMapping("/book")

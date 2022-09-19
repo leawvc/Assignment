@@ -3,6 +3,7 @@ package com.example.assignment.Service;
 import com.example.assignment.DTO.BookRequestDto;
 import com.example.assignment.DTO.BookResponseDto;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.Currency;
 
@@ -11,7 +12,7 @@ public interface BookService {
     Currency USD = Currency.getInstance("USD");
     Currency EUR = Currency.getInstance("EUR");
     public Long createBook(BookRequestDto requestDto, String local);
-    Page<BookResponseDto> getList(int page);
+    Page<BookResponseDto> getList(Pageable pageable);
     static boolean checkISBNNumber(long number)
     {
         int sum = 0, j = 0;

@@ -21,8 +21,7 @@ import java.util.Currency;
 public class BookServicelmpl implements BookService{
     private final BookRepository bookRepository;
     @Transactional(readOnly = true)
-    public Page<BookResponseDto> getList(int page){
-        Pageable pageable = PageRequest.of(page,10);
+    public Page<BookResponseDto> getList(Pageable pageable){
         return bookRepository.findAll(pageable).map(BookResponseDto::new);
     }
 
