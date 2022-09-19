@@ -38,7 +38,6 @@ public class Book {
 //    순환 참조 방지
     @JsonBackReference
     @OneToMany(mappedBy = "book", fetch = FetchType.LAZY)
-    @JsonIgnore
     private List<Author> authorList = new ArrayList<>();
     public void addAuthor(Author author){
         this.authorList.add(author);
