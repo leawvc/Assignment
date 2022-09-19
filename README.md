@@ -4,7 +4,7 @@ commit massege : (기능 이름) 구현
 http://localhost:8080/swagger-ui/index.html#/
 <br></br>
 ### ERD
-![image](https://user-images.githubusercontent.com/43610417/189779748-96ae59e3-8779-48a3-a790-19533e82e4e6.png)
+![image](https://user-images.githubusercontent.com/43610417/190899314-8be33b24-d399-4315-af83-3e291fbb1e84.png)
 <br></br>
 ## 💻 개발 언어 및 활용 기술
 ### 개발 환경 
@@ -35,7 +35,7 @@ java -cp AssignmentApplication
 * 저자 여러명 : https://numchar.tistory.com/29
 * 에러 처리 : https://numchar.tistory.com/27
 * Swagger : https://numchar.tistory.com/26
-* 조건 처리 : https://numchar.tistory.com/32
+* 조건 처리 : https://numchar.tistory.com/32 -> 리펙토링 코드 : https://numchar.tistory.com/34
 ### 폴더 구조
 * assignment
    * Config
@@ -73,3 +73,4 @@ java -cp AssignmentApplication
 * 09-11 : Currency 문제 해결 및 조건 처리, 에러 정리
 * 09-12 : 연관 관계 편의 메서드 설정, Price isbn조건 처리 완료, Readme 정리
 * 09-13 : 에러 정리, Readme 정리
+* 09-18 : 코드 리펙토링
