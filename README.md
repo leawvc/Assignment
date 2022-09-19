@@ -36,6 +36,7 @@ java -cp AssignmentApplication
 * 에러 처리 : https://numchar.tistory.com/27
 * Swagger : https://numchar.tistory.com/26
 * 조건 처리 : https://numchar.tistory.com/32 -> 리펙토링 코드 : https://numchar.tistory.com/34
+* Paging 처리 리펙토링 : https://numchar.tistory.com/28
 ### 폴더 구조
 * assignment
    * Config
