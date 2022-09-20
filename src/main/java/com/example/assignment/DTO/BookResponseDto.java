@@ -13,7 +13,7 @@ import java.util.List;
 public class BookResponseDto {
     private Long bookId;
     private String bookname;
-    private Boolean extinction;
+    private boolean extinction;
     private int isbn;
     private int bookpage;
     private int age;
@@ -24,7 +24,7 @@ public class BookResponseDto {
     public BookResponseDto(Book book){
         this.bookId = book.getId();
         this.bookname = book.getBookName();
-        this.extinction = book.getExtinction();
+        this.extinction = book.isExtinction();
         this.isbn = book.getIsbn();
         this.bookpage = book.getBookpage();
         this.age = book.getAge();

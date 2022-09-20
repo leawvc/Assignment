@@ -8,7 +8,7 @@ import java.util.List;
 @Getter
 public class BookRequestDto {
     private String bookname;
-    private Boolean extinction;
+    private boolean extinction;
     private int isbn;
     private int bookpage;
     private int age;

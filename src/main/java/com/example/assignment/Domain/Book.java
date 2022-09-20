@@ -22,7 +22,7 @@ public class Book {
     @Column(nullable = false)
     private String bookName;
     @Column(nullable = false)
-    private Boolean extinction;
+    private boolean extinction;
     @Column(nullable = false)
     private int isbn;
     @Column(nullable = false)
