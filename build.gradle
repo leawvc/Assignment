@@ -29,10 +29,9 @@ dependencies {
     implementation group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
     implementation group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
     implementation 'org.springdoc:springdoc-openapi-ui:1.6.6'
-//    // 스프링 시큐리티
+    // 스프링 시큐리티
 //    implementation 'org.springframework.boot:spring-boot-starter-security'
-//    // Thymeleaf (뷰 템플릿 엔진)
-//    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    // Thymeleaf (뷰 템플릿 엔진)
     implementation'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
 }

@@ -6,14 +6,12 @@ import com.example.assignment.Domain.Book;
 import com.example.assignment.Repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.text.MessageFormat;
-import java.util.Arrays;
 import java.util.Currency;
 
 @Service
@@ -31,7 +29,6 @@ public class BookServicelmpl implements BookService{
         Currency money = null;
         String bookAuthor = requestDto.getAuthors().replaceAll("\\s", "");
         if (requestDto.getBookname() == null) throw new NullPointerException("책 이름을 입력해주세요");
-        if (requestDto.getExtinction() == null) throw new NullPointerException("단종 여부를 입력해주세요");
         if (local.equals("KRW")){
             money = KRW;
         } else if (local.equals("USD")) {
@@ -46,7 +43,7 @@ public class BookServicelmpl implements BookService{
         if (Pricelen.length() - 2 > 2 )throw new RuntimeException("소수점 2자리 수까지의 값을 입력해주세요");
         return  bookRepository.save(Book.builder()
                 .bookName(requestDto.getBookname())
-                .extinction(requestDto.getExtinction())
+                .extinction(requestDto.isExtinction())
                 .isbn(requestDto.getIsbn())
                 .bookpage(requestDto.getBookpage())
                 .age(requestDto.getAge())
