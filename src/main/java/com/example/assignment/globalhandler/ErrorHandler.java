@@ -1,4 +1,4 @@
-package com.example.assignment.Controller;
+package com.example.assignment.globalhandler;
 
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
